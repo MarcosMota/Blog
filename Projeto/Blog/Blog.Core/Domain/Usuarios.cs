@@ -6,7 +6,7 @@ namespace Blog.Core.Domain
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class Usuarios
+    public partial class Usuarios:BaseEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Usuarios()
@@ -25,6 +25,8 @@ namespace Blog.Core.Domain
 
         [StringLength(100)]
         public string email { get; set; }
+
+        public Guid UsuarioGuid { get; set; }
 
         [StringLength(100)]
         public string senha { get; set; }

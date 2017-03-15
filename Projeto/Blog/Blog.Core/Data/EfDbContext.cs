@@ -73,7 +73,13 @@ namespace Blog.Core.Data
                 .IsUnicode(false);
 
             modelBuilder.Entity<Permissoes>()
-                .Property(e => e.descricao_permissao)
+                .Property(e => e.Nome)
+                .IsUnicode(false);
+            modelBuilder.Entity<Permissoes>()
+                .Property(e => e.Sistema)
+                .IsUnicode(false);
+            modelBuilder.Entity<Permissoes>()
+                .Property(e => e.Categoria)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Tags>()

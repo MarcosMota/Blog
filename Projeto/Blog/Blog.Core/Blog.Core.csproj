@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.4.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.1\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CommonServiceLocator.NinjectAdapter.Unofficial, Version=3.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.NinjectAdapter.Unofficial.3.2.2.0\lib\Net40\CommonServiceLocator.NinjectAdapter.Unofficial.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -38,12 +50,20 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59d6d24383174ac4, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocation.1.0.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -86,7 +106,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogException.cs" />
+    <Compile Include="Cache\CacheExtensions.cs" />
+    <Compile Include="Cache\ICacheManager.cs" />
+    <Compile Include="Cache\NopNullCache.cs" />
+    <Compile Include="Configuration\BlogConfig.cs" />
     <Compile Include="Data\EfRepository.cs" />
+    <Compile Include="Data\Services\Security\FormsAuthenticationService.cs" />
+    <Compile Include="Data\Services\Security\IAuthenticationService.cs" />
+    <Compile Include="Data\Services\Security\IPermissionProvider.cs" />
+    <Compile Include="Data\Services\Security\IPermissionService.cs" />
+    <Compile Include="Data\Services\Security\PermissonService.cs" />
+    <Compile Include="Data\Services\Security\StandardPermissionProvider.cs" />
+    <Compile Include="Data\Services\Usuario\IUsuarioService.cs" />
+    <Compile Include="Data\Services\Usuario\SystemUsuarioRoleNames.cs" />
     <Compile Include="Data\Services\Usuario\UsuarioService.cs" />
     <Compile Include="Domain\Artigos.cs" />
     <Compile Include="Domain\Artigos_MetaTags.cs" />
@@ -98,10 +131,23 @@
     <Compile Include="Data\EfDbContext.cs" />
     <Compile Include="Domain\Logs.cs" />
     <Compile Include="Domain\Permissoes.cs" />
+    <Compile Include="Domain\Security\DefaultPermission.cs" />
     <Compile Include="Domain\Tags.cs" />
     <Compile Include="Domain\Usuarios.cs" />
     <Compile Include="Domain\Usuarios_Permissoes.cs" />
+    <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />
+    <Compile Include="Infrastructure\BlogEngine.cs" />
+    <Compile Include="Infrastructure\EngineContext.cs" />
+    <Compile Include="Infrastructure\IEngine.cs" />
+    <Compile Include="Infrastructure\ITypeFinder.cs" />
+    <Compile Include="Infrastructure\ManagerDependency\ContainerManager.cs" />
+    <Compile Include="Infrastructure\ManagerDependency\IDependencyRegistrar.cs" />
+    <Compile Include="Infrastructure\ManagerDependency\IoC.cs" />
+    <Compile Include="Infrastructure\ManagerDependency\Modules\ServiceNinjectModule.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\WebAppTypeFinder.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="IWorkContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\RoleProvider.cs" />
   </ItemGroup>
