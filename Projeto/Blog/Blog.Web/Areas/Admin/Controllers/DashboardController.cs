@@ -6,7 +6,8 @@ using System.Web.Mvc;
 
 namespace Blog.Web.Areas.Admin.Controllers
 {
-    public class DashboardController : BaseAdminController
+    [Authorize(Roles ="Admin")]
+    public class DashboardController : Controller
     {
         // GET: Admin/Dashboard
         public ActionResult Index()

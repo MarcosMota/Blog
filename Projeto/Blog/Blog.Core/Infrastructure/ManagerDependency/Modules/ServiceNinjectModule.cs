@@ -16,7 +16,6 @@ namespace Blog.Core.Infrastructure.ManagerDependency.Modules
     {
         public override void Load()
         {
-            Bind(typeof(IRepository<Usuarios>)).To(typeof(EfRepository<Usuarios>));
             Bind(typeof(IRepository<Permissoes>)).To(typeof(EfRepository<Permissoes>));
 
             //   kernel.Bind(typeof(IRepository<Usuarios>)).To(typeof(EfRepository<Permissoes>));

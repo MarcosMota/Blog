@@ -21,7 +21,6 @@ namespace Blog.Tests.Services.PermissoesTest
         {
             var kernel = new StandardKernel();  
            // kernel.Bind<IRepository<Usuarios>>().To<EfRepository<Usuarios>();
-            kernel.Bind(typeof(IRepository<Usuarios>)).To(typeof(EfRepository<Usuarios>));
             kernel.Bind(typeof(IRepository<Permissoes>)).To(typeof(EfRepository<Permissoes>));
 
             //   kernel.Bind(typeof(IRepository<Usuarios>)).To(typeof(EfRepository<Permissoes>));

@@ -100,8 +100,6 @@ namespace Blog.Core.Data.Services.Usuario
                 return null;
 
             var query = from c in _usuarioRepository.Table
-                        where c.UsuarioGuid == customerGuid
-                        orderby c.Id
                         select c;
             var customer = query.FirstOrDefault();
             return customer;
@@ -113,8 +111,6 @@ namespace Blog.Core.Data.Services.Usuario
                 return null;
 
             var query = from c in _usuarioRepository.Table
-                        orderby c.Id
-                        where c.email == email
                         select c;
             var customer = query.FirstOrDefault();
             return customer;

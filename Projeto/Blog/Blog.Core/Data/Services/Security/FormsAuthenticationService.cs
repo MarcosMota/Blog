@@ -31,7 +31,8 @@ namespace Blog.Core.Data.Services.Security
         /// <param name="httpContext">HTTP context</param>
         /// <param name="customerService">Customer service</param>
         /// <param name="customerSettings">Customer settings</param>
-        public FormsAuthenticationService(HttpContextBase httpContext,
+        public FormsAuthenticationService(
+            HttpContextBase httpContext,
             IUsuarioService usuarioService)
         {
             this._httpContext = httpContext;
