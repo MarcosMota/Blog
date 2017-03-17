@@ -1,4 +1,6 @@
-﻿using Blog.Web.App_Start;
+﻿using Blog.Core.Infraestrutura.Manager_Dependency;
+using Blog.Web.App_Start;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,10 @@ namespace Blog.Web
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            DependencyResolver.SetResolver(
+                new ResolverDependency(
+                    new StandardKernel(
+                        new AutenticationModule())));
         }
     }
 }

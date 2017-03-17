@@ -31,9 +31,11 @@ var config = {
     //Bootstrap CSS and Fonts
     bootstrapcss: 'bower_components/bootstrap/dist/css/bootstrap.css',
     boostrapfonts: 'bower_components/bootstrap/dist/fonts/*.*',
+    particulesJs: 'bower_components/particulesJs/particles.min',
 
     appcss: 'Content/Site.css',
     fontsout: 'Content/dist/fonts',
+    particulesuot: 'Scripts/particles',
     cssout: 'Content/dist/css'
 
 }
@@ -96,9 +98,9 @@ gulp.task('fonts', ['bower-restore'], function () {
         .pipe(gulp.dest(config.fontsout));
 });
 
-// Combine and minify css files and output fonts
-gulp.task('styles', ['css', 'fonts'], function () {
-
+gulp.task('styles', ['bower-restore'], function () {
+    return gulp.src(config.particulesJs)
+        .pipe(gulp.dest(config.particulesuot));
 });
 
 //Restore all bower packages
