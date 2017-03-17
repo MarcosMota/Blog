@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Blog.Core.Data;
+using Ninject;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,8 +10,9 @@ using System.Web.Security;
 
 namespace Blog.Core.Security
 {
-    class PrincipalRoleProvider : RoleProvider
+    public class PrincipalRoleProvider : RoleProvider
     {
+        public EfDbContext _context =new EfDbContext();
         public override string ApplicationName
         {
             get
@@ -29,7 +33,7 @@ namespace Blog.Core.Security
 
         public override void CreateRole(string roleName)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override bool DeleteRole(string roleName, bool throwOnPopulatedRole)
@@ -49,12 +53,25 @@ namespace Blog.Core.Security
 
         public override string[] GetRolesForUser(string username)
         {
-            throw new NotImplementedException();
+            
+            var roles = (from article in _context.Permissoes
+                        where article.Usuarios_Permissoes
+                        .Any(c => c.Usuarios.email== username)
+                        select article).Select(p=>p.Sistema);
+
+            if (roles != null)
+                return roles.ToArray();
+            else
+                return new string[] { };
         }
 
         public override string[] GetUsersInRole(string roleName)
         {
-            throw new NotImplementedException();
+            var roles = _context.Permissoes.Where(p => p.Sistema == roleName).Select(p=>p.Sistema);
+            if (roles != null)
+                return roles.ToArray();
+            else
+                return new string[] { };
         }
 
         public override bool IsUserInRole(string username, string roleName)
