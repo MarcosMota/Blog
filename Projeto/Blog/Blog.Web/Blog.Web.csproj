@@ -577,15 +577,36 @@
     <Content Include="bower_components\respond-minmax\src\matchmedia.addListener.js" />
     <Content Include="bower_components\respond-minmax\src\matchmedia.polyfill.js" />
     <Content Include="bower_components\respond-minmax\src\respond.js" />
+    <Content Include="Content\dist\css\animsition.css" />
     <Content Include="Content\dist\css\app.css" />
     <Content Include="Content\dist\css\app.min.css" />
+    <Content Include="Content\dist\css\font-awesome.css" />
+    <Content Include="Content\dist\css\style.css" />
+    <Content Include="Content\dist\css\thema.css" />
     <Content Include="Content\dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
+    <Content Include="Images\background\833.jpg" />
+    <Content Include="Images\logo\logo-white.png" />
+    <Content Include="Images\logo\logo-white1.png" />
+    <Content Include="Images\logo\logo.png" />
+    <Content Include="Images\logo\logo1.png" />
     <Content Include="Scripts\bootstrap-bundle.min.js" />
     <Content Include="Scripts\jquery-bundle.min.js" />
     <Content Include="Scripts\modernizer-min.js" />
     <Content Include="Scripts\particles\app.js" />
+    <Content Include="Scripts\particles\jquery.animsition.js" />
+    <Content Include="Scripts\particles\jquery.appear.js" />
+    <Content Include="Scripts\particles\jquery.bxslider.min.js" />
+    <Content Include="Scripts\particles\jquery.countTo.js" />
+    <Content Include="Scripts\particles\jquery.cubeportfolio.min.js" />
+    <Content Include="Scripts\particles\jquery.easing.1.3.js" />
+    <Content Include="Scripts\particles\jquery.magnific-popup.min.js" />
+    <Content Include="Scripts\particles\map-script.min.js" />
+    <Content Include="Scripts\particles\masterslider.min.js" />
+    <Content Include="Scripts\particles\materialmenu.js" />
+    <Content Include="Scripts\particles\mediaelement-and-player.min.js" />
+    <Content Include="Scripts\particles\modernizr.js" />
     <Content Include="Scripts\particles\particles.min.js" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\maps\bootstrap-bundle.min.js.map" />
@@ -612,6 +633,7 @@
     <Content Include="bower_components\particulesJs\package.json" />
     <Content Include="bower_components\particulesJs\README.md" />
     <Content Include="Scripts\particles\particles.json" />
+    <Content Include="Views\Blog\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -644,6 +666,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Controllers\ArtigosController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

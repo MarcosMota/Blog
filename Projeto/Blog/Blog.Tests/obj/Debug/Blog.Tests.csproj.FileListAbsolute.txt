@@ -1,4 +1,3 @@
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\obj\Debug\Blog.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Blog.Tests.dll.config
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Blog.Tests.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Blog.Tests.pdb
@@ -7,6 +6,9 @@ C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ent
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.dll
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Common.dll
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Mvc.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Rhino.Mocks.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.Helpers.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.Mvc.dll
@@ -14,10 +16,14 @@ C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Sys
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Blog.Core.pdb
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\EntityFramework.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.xml
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Common.xml
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Mvc.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Rhino.Mocks.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.Helpers.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.Mvc.xml
@@ -25,16 +31,6 @@ C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Sys
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\obj\Debug\Blog.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\obj\Debug\Blog.Tests.dll
 C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\obj\Debug\Blog.Tests.pdb
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Common.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Mvc.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\WebActivatorEx.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Autofac.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Autofac.Integration.Mvc.dll
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.xml
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Common.xml
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Ninject.Web.Mvc.xml
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Autofac.xml
-C:\Users\Mota\Documents\Projetos\Blog\Blog\Projeto\Blog\Blog.Tests\bin\Debug\Autofac.Integration.Mvc.xml
