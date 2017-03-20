@@ -6869,7 +6869,23 @@ a[data-popup] {
   border-bottom: 3px solid rgba(255, 255, 255, 0.3);
   border-top: 3px solid rgba(255, 255, 255, 0.85);
 }
-
+.tag{
+    float: left;
+    padding: 6px;
+    margin: 0 3px 3px 0;
+    color: #fff;
+    background-color: #212121;
+    font-size: 12px;
+    text-align: center;
+    -webkit-transition: color 0.3s, background-color 0.3s;
+    -moz-transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+}
+.tag:hover{
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #333;
+}
 .cbp-popup-ready .cbp-popup-loadingBox {
   visibility: hidden;
   display: none;

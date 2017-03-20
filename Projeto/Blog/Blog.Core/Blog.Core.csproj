@@ -114,6 +114,7 @@
     <Compile Include="Domain\Configuracoes.cs" />
     <Compile Include="Data\EfDbContext.cs" />
     <Compile Include="Domain\Logs.cs" />
+    <Compile Include="Domain\Menu.cs" />
     <Compile Include="Domain\Permissoes.cs" />
     <Compile Include="Domain\Security\DefaultPermission.cs" />
     <Compile Include="Domain\Tags.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Domain\Usuarios_Permissoes.cs" />
     <Compile Include="Infraestrutura\Manager Dependency\AutenticationModule.cs" />
     <Compile Include="Infraestrutura\Manager Dependency\ResolverDependency.cs" />
+    <Compile Include="Infraestrutura\ManagerMenu.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="IWorkContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

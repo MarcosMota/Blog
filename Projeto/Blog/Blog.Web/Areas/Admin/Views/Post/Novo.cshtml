@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Novo";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div id="tab-general" ng-controller="postController">
+    <div class="row mbl">
+        <div class="col-lg-12">
+
+            <div class="col-md-12">
+                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12">
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-body">
+
+                                <h2>Post</h2>
+                                <a href="#" class="btn btn-info">
+                                    <i class="fa fa-check"></i> Salvar
+                                </a>
+                                <a href="#" class="btn btn-success">
+                                    <i class="fa fa-check"></i> Salvar e Publicar
+                                </a>
+                                <ul id="generalTab" class="nav nav-tabs responsive">
+                                    <li class="active"><a href="#alert-tab" data-toggle="tab">Post</a></li>
+                                    <li><a href="#note-tab" data-toggle="tab">SEO</a></li>
+                                </ul>
+
+                                <div id="generalTabContent" class="tab-content responsive">
+                                    <div id="alert-tab" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div id="editor">
+                                                <h1>Hello world!</h1>
+                                                <p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div id="note-tab" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="note note-success">
+                                                    <h4 class="box-heading">Success! Duis mollis, est non commodo luctus</h4>
+                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                                </div>
+                                                <div class="note note-info">
+                                                    <h4 class="box-heading">Info! Duis mollis, est non commodo luctus</h4>
+                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="note note-warning">
+                                                    <h4 class="box-heading">Warning! Duis mollis, est non commodo luctus</h4>
+                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                                </div>
+                                                <div class="note note-danger">
+                                                    <h4 class="box-heading">Dangerous! Duis mollis, est non commodo luctus</h4>
+                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts{
+<script src="~/Areas/Admin/ckeditor/ckeditor.js"></script>
+<script src="~/Areas/Admin/ckeditor/samples/js/sample.js"></script>
+<link href="~/Areas/Admin/ckeditor/samples/css/samples.css" rel="stylesheet" />
+<link href="~/Areas/Admin/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" rel="stylesheet" />
+
+<script>
+	initSample();
+</script>
+
+
+    }
+

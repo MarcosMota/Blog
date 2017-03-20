@@ -1,0 +1,1 @@
+﻿var module_blog = angular.module('blog.admin', []);

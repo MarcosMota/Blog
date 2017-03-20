@@ -12,6 +12,7 @@ namespace Blog.Web.Areas.Admin.Controllers
         // GET: Admin/Dashboard
         public ActionResult Index()
         {
+            @ViewBag.Title = "Dashboard";
             return View();
         }
     }

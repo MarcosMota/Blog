@@ -31,6 +31,8 @@ namespace Blog.Core.Domain
 
         [StringLength(100)]
         public string meta_title { get; set; }
+        [StringLength(50)]
+        public string imagem { get; set; }
 
         [StringLength(100)]
         public string meta_description { get; set; }

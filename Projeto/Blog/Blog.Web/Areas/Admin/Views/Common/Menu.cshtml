@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Blog.Core.Domain.Menu>
+
+
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href=@Url.Action(item.Action,item.Controller)>
+            <i class="@item.icone">
+                <div class="icon-bg bg-orange"></div>
+            </i><span class="menu-title">@item.Nome</span>
+        </a>
+    </li>
+}

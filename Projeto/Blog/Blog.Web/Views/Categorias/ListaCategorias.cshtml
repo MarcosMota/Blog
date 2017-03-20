@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Blog.Core.Domain.Categorias>
+
+
+<section class="categories">
+    <h4 class="post-title">Categorias</h4>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href='@Url.Action("Categoria","Blog",new {id=item.id_categoria })'> @item.descricao</a>
+            </li>
+        }
+    </ul>
+
+</section>

@@ -1,0 +1,274 @@
+﻿@model Blog.Core.Domain.Artigos
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container space-y-t-h space-y-b">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>@Model.titulo</h1>
+                    @Html.Encode(Model.conteudo)
+                   
+                </div>
+                <!-- / col-md-12 -->
+            </div>
+            <!-- / row -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-share">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest "></i></a>
+                    </div>
+                </div>
+                <!-- / col-md-12 -->
+            </div>
+            <!-- / row-->
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <div class="author-post clearfix">
+                        <a href="#"> <img src="images/news/author-img.jpg" class="author-img" alt=""> </a>
+                        <div class="author-post__data">
+
+                            <h6>author</h6>
+
+                            <h4 class="author-post__title"><a href="#"> johnathan doe </a> </h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti ut rerum non unde autem impedit incidunt officia reiciendis aliquam ipsam.</p>
+
+                        </div>
+                        <!-- / author data -->
+
+                    </div>
+                    <!-- / author-wrap -->
+
+                </div>
+                <!-- / col-md-12  -->
+
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-md-12 comment-wrap">
+                    <span class="join">join the discussion</span>
+                    <h2 class="section-title">4 comments</h2>
+                    <ul class="commentsList clearfix padding-top-half">
+                        <li class="comment">
+                            <div class="commentBand clearfix">
+                                <img class="avatar" src="images/news/author-comment1.jpg" alt="">
+                                <header class="comment-header clearfix">
+                                    <a href="#" class="pull-right more-title">
+                                        replay
+                                    </a>
+                                    <div class="comment-author">
+                                        <h5>Sleeman23</h5>
+                                        <time datetime="2015-04-26T12:04"> 22.Aug.2015 </time>
+                                    </div>
+                                </header>
+                                <section class="comment-text nested-comment">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui et nunc ornare vulputate non fringilla massa. Praesent sit amet erat sapien, auctor consectetur ligula.
+                                </section>
+
+                            </div>
+                            <!-- end Comment Band -->
+                            <ul class="commentListSub">
+                                <li class="comment">
+                                    <div class="commentBand">
+                                        <img class="avatar" src="images/news/author-comment2.jpg" alt="">
+                                        <header class="comment-header clearfix">
+                                            <a href="#" class="pull-right more-title">
+                                                replay
+                                            </a>
+                                            <div class="comment-author">
+                                                <h5>Sleeman23</h5>
+                                                <time datetime="2015-04-26T12:04">22.Aug.2015</time>
+                                            </div>
+                                        </header>
+                                        <section class="comment-text nested-comment">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui et nunc ornare vulputate non fringilla massa. Praesent sit amet erat sapien, auctor consectetur ligula.
+                                        </section>
+
+                                    </div>
+                                    <!-- end Comment Band -->
+                                    <ul class="commentListSub">
+                                        <li class="comment">
+                                            <div class="commentBand">
+                                                <img class="avatar" src="images/news/author-comment1.jpg" alt="">
+                                                <header class="comment-header clearfix">
+                                                    <a href="#" class="pull-right more-title">
+                                                        replay
+                                                    </a>
+                                                    <div class="comment-author">
+                                                        <h5>Sleeman23</h5>
+                                                        <time datetime="2015-04-26T12:04">22.Aug.2015</time>
+                                                    </div>
+                                                </header>
+                                                <section class="comment-text">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui et nunc ornare vulputate non fringilla massa. Praesent sit amet erat sapien, auctor consectetur ligula.
+                                                </section>
+
+                                            </div>
+                                            <!-- end Comment Band -->
+                                        </li>
+                                        <!-- / comment -->
+                                    </ul>
+                                    <!-- end Comment List Sub -->
+                                </li>
+                                <!-- end Comment -->
+                            </ul>
+                            <!-- end Comment List Sub -->
+                        </li>
+                        <!-- end Comment -->
+                        <li class="comment">
+                            <div class="commentBand">
+                                <img class="avatar" src="images/news/author-comment3.jpg" alt="">
+                                <header class="comment-header clearfix">
+                                    <a href="#" class="pull-right more-title">
+                                        replay
+                                    </a>
+                                    <div class="comment-author">
+                                        <h5>Sleeman23</h5>
+                                        <time datetime="2015-04-26T12:04">22.Aug.2015</time>
+                                    </div>
+                                </header>
+                                <section class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui et nunc ornare vulputate non fringilla massa. Praesent sit amet erat sapien, auctor consectetur ligula.
+                                </section>
+
+                            </div>
+                            <!-- end Comment Band -->
+                        </li>
+                        <!-- end Comment -->
+                        <li class="comment">
+                            <div class="commentBand">
+                                <img class="avatar" src="images/news/author-comment4.jpg" alt="">
+                                <header class="comment-header clearfix">
+                                    <a href="#" class="pull-right more-title">
+                                        replay
+                                    </a>
+                                    <div class="comment-author">
+                                        <h5>Sleeman23</h5>
+                                        <time datetime="2015-04-26T12:04">22.Aug.2015</time>
+                                    </div>
+                                </header>
+                                <section class="comment-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui et nunc ornare vulputate non fringilla massa. Praesent sit amet erat sapien, auctor consectetur ligula.
+                                </section>
+
+                            </div>
+                            <!-- end Comment Band -->
+                        </li>
+                        <!-- end Comment -->
+                    </ul>
+                    <!-- end Comment List -->
+                </div>
+                <!-- end col-md-12-->
+            </div>
+            <!-- end row -->
+
+            <div class="row">
+                <div class="col-md-12 comment-wrap">
+
+                    <h2 class="section-title">leave comments</h2>
+                    <div class="quform-outer space-y-t-s">
+                        <form class="quform form-overlay" action="http://carna.webgearmedia.com/quform/process.php" method="post" enctype="multipart/form-data" onclick="">
+                            <div class="quform-inner">
+                                <div class="quform-elements">
+                                    <div class="row">
+                                        <!-- Begin Text input element -->
+                                        <div class="quform-overlay quform-element clearfix quform-element-text col-md-6">
+                                            <label for="name">
+                                                Name <span class="quform-required">*</span>
+                                            </label>
+                                            <div class="quform-input">
+                                                <input id="name" type="text" name="name" />
+                                            </div>
+                                        </div>
+                                        <!-- End Text input element -->
+                                        <!-- Begin Text input element -->
+                                        <div class="quform-overlay quform-element clearfix quform-element-text col-md-6">
+                                            <label for="email">
+                                                Email address <span class="quform-required">*</span>
+                                            </label>
+                                            <div class="quform-input">
+                                                <input id="email" type="text" name="email" />
+                                            </div>
+                                        </div>
+                                        <!-- End Text input element -->
+                                        <!-- Begin Textarea element -->
+                                        <div class="quform-overlay quform-element clearfix quform-element-textarea quform-huge col-md-12">
+                                            <label for="message">
+                                                Message <span class="quform-required">*</span>
+                                            </label>
+                                            <div class="quform-input">
+                                                <textarea id="message" name="message" style="height: 130px;"></textarea>
+                                            </div>
+                                        </div>
+                                        <!-- End Textarea element -->
+                                        <!-- Begin Submit button -->
+                                        <div class="quform-submit-overlay col-md-12 clearfix">
+                                            <div class="quform-submit-inner">
+                                                <button type="submit" value="Send" class="btn-main small">
+                                                    <span>submit comment</span>
+                                                </button>
+                                            </div>
+                                            <div class="quform-loading-wrap">
+                                                <span class="quform-loading"></span>
+                                            </div>
+                                        </div>
+                                        <!-- End Submit button -->
+                                    </div>
+                                    <!-- / row -->
+                                </div>
+                                <!-- / quform-elements -->
+                            </div>
+                            <!-- / quform-inner" -->
+                        </form>
+                        <!-- end quform -->
+                    </div>
+                    <!-- end quform-outer -->
+                </div>
+                <!-- end col-md-12 -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end col-md-9-->
+        <div class="space-y-t-h visible-sm-block visible-xs-block"></div>
+        <div class="col-md-3">
+            <aside class="blog-sidebar">
+
+                <form id="searchfom" method="get" role="search">
+                    <input type="search" placeholder="type & hit enter..." name="search">
+                </form>
+       @Html.Action("PostRecentes", "Blog");
+                @Html.Action("ListaCategorias", "Categorias");
+             
+
+                <section class="tags">
+                    <h4 class="post-title">tags</h4>
+                    <a href="#"> lifestyle</a>
+                    <a href="#"> photography</a>
+                    <a href="#"> news</a>
+                    <a href="#"> music</a>
+                    <a href="#"> health</a>
+                    <a href="#"> science</a>
+
+                    <a href="#"> design</a>
+
+                    <a href="#"> life</a>
+
+                </section>
+            </aside>
+            <!-- end blog sidebar -->
+        </div>
+        <!-- end col-md-3 -->
+    </div>
+    <!-- end row -->
+</div>
+<!-- end container -->

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div id="tab-general" ng-controller="postController">
+    <div class="row mbl">
+        <div class="col-lg-12">
+
+            <div class="col-md-12">
+                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12">
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-body">
+
+                                    <h2>Post</h2>
+                                    <a href="#" class="btn btn-default">
+                                        <i class="fa fa-plus"></i> Novo Post
+                                    </a>
+                                    <input type="text" class="form-control" ng-model="busca" placeholder="Digite o nome do artigo" />
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Titulo</th>
+                                            <th>Data de Criação</th>
+                                            <th>Status</th>
+                                            <th>Ação</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in listPosts | filter:busca">
+                                            <td>{{item.id}}</td>
+                                            <td>{{item.titulo}}</td>
+                                            <td>{{item.dt_criacao}}</td>
+                                            <td ng-if="item.status"><span class="label label-sm label-success">Publicado</span></td>
+                                            <td ng-if="!item.status"><span class="label label-sm label-warning">N Publicado</span></td>
+                                            <td>
+                                                <a href='Editar/{{item.id}}' class="btn btn-primary">
+                                                    <i class="fa fa-folder-open"></i>
+                                                </a>
+                                                <a href="#" class="btn btn-danger">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/angular/admin/post/controllers/postController.js"></script>  
+}

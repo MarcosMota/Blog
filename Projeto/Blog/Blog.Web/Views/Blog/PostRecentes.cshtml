@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Blog.Core.Domain.Artigos>
+
+<section class="recent-posts">
+
+    <h4 class="post-title">Posts Recentes</h4>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="clearfix">
+                <a href='@Url.Action("Post","Blog",new {id=item.id_artigo })'><img src="~/Images/post/@item.imagem" alt=""></a>
+                <div class="recent-post__inner">
+                    <a href="#"> @item.titulo</a>
+                    <time datetime="2015-04-26T12:04"> <strong>@string.Format("{0:dddd, MMMM d, yyyy}", item.data_criacao)</strong></time>
+                </div>
+            </li>
+        }
+        
+    </ul>
+
+</section>
