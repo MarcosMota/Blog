@@ -1,7 +1,14 @@
-﻿
+﻿@model Blog.Web.Areas.Admin.Models.PostViewModel
 @{
     ViewBag.Title = "Novo";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+<style>
+    ul.nav.nav-tabs li.active a{
+        background:#5cb85c;
+    }
+    </style>    
 }
 <div id="tab-general" ng-controller="postController">
     <div class="row mbl">
@@ -21,55 +28,79 @@
                     <div class="col-lg-12">
                         <div class="panel">
                             <div class="panel-body">
-
+                                @using (Html.BeginForm("Novo", "Post", FormMethod.Post, new { enctype = "multipart/form-data"}))
+                                {
                                 <h2>Post</h2>
                                 <a href="#" class="btn btn-info">
                                     <i class="fa fa-check"></i> Salvar
                                 </a>
-                                <a href="#" class="btn btn-success">
+                                <button class="btn btn-success" type="submit">
                                     <i class="fa fa-check"></i> Salvar e Publicar
-                                </a>
+                                </button>
                                 <ul id="generalTab" class="nav nav-tabs responsive">
                                     <li class="active"><a href="#alert-tab" data-toggle="tab">Post</a></li>
                                     <li><a href="#note-tab" data-toggle="tab">SEO</a></li>
                                 </ul>
 
-                                <div id="generalTabContent" class="tab-content responsive">
+                                <div id="generalTabContent" style="margin-top: 20px;" class="tab-content responsive">
                                     <div id="alert-tab" class="tab-pane fade in active">
                                         <div class="row">
-                                            <div id="editor">
-                                                <h1>Hello world!</h1>
-                                                <p>I'm an instance of <a href="http://ckeditor.com">CKEditor</a>.</p>
+                                            
+                                                @Html.HiddenFor(x=>x.id_post)
+                                            <div class="col-lg-8">
+                                                <div class="form-group">
+                                                    <label>Categorias</label>
+                                                    @Html.DropDownListFor(model => model.id_categoria, ViewBag.Categorias as SelectList,new { @class = "form-control" })
+                                                
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <div class="form-group">
+                                                    <label>Publicado</label>
+                                                    @Html.CheckBoxFor(x => x.ativo, new { @class = "radio" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    @Html.LabelFor(m => m.ImageUpload)
+                                                    @Html.TextBoxFor(m => m.ImageUpload, new { type = "file" })
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Titulo</label>
+                                                @Html.TextBoxFor(x=>x.titulo, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Descricao</label>
+                                                @Html.TextAreaFor(x => x.descricao,6,6, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Conteudo</label>
+                                                @Html.TextAreaFor(x=>x.conteudo,new {id="editor" })
+                                                @*<div id="editor">
+                                                </div>*@
+
                                             </div>
                                         </div>
                                         </div>
-                                    </div>
+                                   
                                     <div id="note-tab" class="tab-pane fade">
                                         <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="note note-success">
-                                                    <h4 class="box-heading">Success! Duis mollis, est non commodo luctus</h4>
-                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label>Meta Title</label>
+                                                    @Html.TextBoxFor(x=>x.meta_title,new { @class="form-control"})
                                                 </div>
-                                                <div class="note note-info">
-                                                    <h4 class="box-heading">Info! Duis mollis, est non commodo luctus</h4>
-                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="note note-warning">
-                                                    <h4 class="box-heading">Warning! Duis mollis, est non commodo luctus</h4>
-                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                                                </div>
-                                                <div class="note note-danger">
-                                                    <h4 class="box-heading">Dangerous! Duis mollis, est non commodo luctus</h4>
-                                                    <p>Nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                                                <div class="form-group">
+                                                    <label>Meta Description</label>
+                                                    @Html.TextBoxFor(x => x.meta_description, new { @class = "form-control" })
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                }
                                 </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 namespace Blog.Core.Domain
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -46,17 +47,18 @@ namespace Blog.Core.Domain
 
         public bool? ativo { get; set; }
 
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Artigo_Comentarios> Artigo_Comentarios { get; set; }
-
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Artigos_MetaTags> Artigos_MetaTags { get; set; }
-
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Artigos_Tags> Artigos_Tags { get; set; }
-
+        [JsonIgnore]
         public virtual Categorias Categorias { get; set; }
-
+        [JsonIgnore]
         public virtual Usuarios Usuarios { get; set; }
     }
 }
