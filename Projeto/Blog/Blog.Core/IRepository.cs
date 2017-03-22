@@ -29,7 +29,7 @@ namespace Blog.Core
         /// Insert entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        void Insert(IEnumerable<T> entities);
+        void Insert(List<T> entities);
 
         /// <summary>
         /// Update entity
@@ -41,7 +41,7 @@ namespace Blog.Core
         /// Update entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        void Update(IEnumerable<T> entities);
+        void Update(List<T> entities);
 
         /// <summary>
         /// Delete entity
@@ -53,16 +53,10 @@ namespace Blog.Core
         /// Delete entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        void Delete(IEnumerable<T> entities);
+        void Delete(List<T> entities);
 
-        /// <summary>
-        /// Gets a table
-        /// </summary>
-        IQueryable<T> Table { get; }
+        List<T> GetAll();
+        List<T> GetForQuery(Func<T,bool> filtro);
 
-        /// <summary>
-        /// Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
-        /// </summary>
-        IQueryable<T> TableNoTracking { get; }
     }
 }

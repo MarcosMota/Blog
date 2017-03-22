@@ -1,5 +1,6 @@
 namespace Blog.Core.Domain
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -19,7 +20,7 @@ namespace Blog.Core.Domain
 
         [StringLength(100)]
         public string descricao { get; set; }
-
+        [JsonIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Artigos> Artigos { get; set; }
     }

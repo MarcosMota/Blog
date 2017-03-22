@@ -35,12 +35,13 @@ namespace Blog.Web.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-            [ValidateInput(false)]
+        [ValidateInput(false)]
         public ActionResult Novo(PostViewModel post)
         {
-            if(post != null)
+            if (ModelState.IsValid) { 
+            if (post != null)
             {
-               
+
                 if (post.ImageUpload != null)
                 {
                     // Delete exiting file
@@ -50,7 +51,7 @@ namespace Blog.Web.Areas.Admin.Controllers
                     string path = Path.Combine(Server.MapPath(_ImagesPath), fileName);
                     post.ImageUpload.SaveAs(path);
                     post.imagem = fileName;
-                    
+
                 }
                 Artigos artigo = null;
                 if (post.id_post == 0)
@@ -68,10 +69,10 @@ namespace Blog.Web.Areas.Admin.Controllers
                         meta_description = post.meta_description == null ? "" : post.meta_description,
                         id_categoria = post.id_categoria,
                         imagem = post.imagem
-                        
+
                     };
                     db.Artigos.Add(artigo);
-                    
+
                 }
                 else
                 {
@@ -93,13 +94,13 @@ namespace Blog.Web.Areas.Admin.Controllers
                 db.SaveChanges();
 
 
-                @ViewBag.Title = "Post";
+                ViewBag.Title = "Post";
                 return RedirectToAction("Index");
             }
 
-            
 
-            return View();
+        }
+            return View(post);
         }
         public ActionResult Editar(int id)
         {
@@ -122,7 +123,7 @@ namespace Blog.Web.Areas.Admin.Controllers
                 ViewBag.Categorias = new SelectList(db.Categorias, "id_categoria", "descricao");
                 return View("Novo", post);
             }
-            @ViewBag.Title = "Post";
+            ViewBag.Title = "Post";
             return View();
         }
     }

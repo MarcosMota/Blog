@@ -14,6 +14,9 @@ namespace Blog.Web.App_Start
     using System.Data.Entity;
     using Core.Data;
     using System.Configuration;
+    using Core.Domain;
+    using Core;
+    using Core.Data.Repositorio;
 
     public static class NinjectWebCommon 
     {
@@ -73,6 +76,8 @@ namespace Blog.Web.App_Start
 
            // kernel.Bind<DbContext>().To<EfDbContext>();
             kernel.Bind<RoleProvider>().To<PrincipalRoleProvider>();
+            kernel.Bind<EfDbContext>().ToSelf().InRequestScope();
+            kernel.Bind<IRepository<Categorias>>().To<CategoriaRepositorio>();
         }        
     }
 }

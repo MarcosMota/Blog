@@ -1,0 +1,87 @@
+﻿@model List<Blog.Web.Areas.Admin.Models.CategoriaViewModel>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="tab-general" ng-controller="categoriaController">
+    <div class="row mbl">
+        <div class="col-lg-12">
+
+            <div class="col-md-12">
+                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-lg-12">
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-body">
+
+                                <h2>Post</h2>
+                                <a href='@Url.Action("Novo","Categoria")' class="btn btn-default">
+                                    <i class="fa fa-plus"></i> Nova Categoria
+                                </a>
+                                <input type="text" class="form-control" ng-model="busca" placeholder="Digite o nome do artigo" />
+                                <table class="table table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Descrição</th>
+                                            <th>Ação</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                            <tr ng-repeat="item in listCategorias">
+                                                <td>{{item.id_categoria}}</td>
+                                                <td>{{item.descricao}}</td>
+                                                <td>
+                                                    <a href='/Editar/{{item.id_categoria}}' class="btn btn-primary">
+                                                        <i class="fa fa-folder-open"></i>
+                                                    </a>
+                                                    <a href='/Excluir/{{item.id_categoria}}' class="btn btn-danger">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                        
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script>
+        @{
+            var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+            var json = serializer.Serialize(Model);
+        }
+        module_blog.factory('CategoriaAPI', [function () {
+
+            var _categorias = @Html.Raw(json);
+            console.log(_categorias);
+            return {
+                categorias:_categorias
+            }
+        }]);
+    </script>
+    
+<script src="~/Scripts/angular/admin/post/controllers/categoriaController.js"></script>
+    }

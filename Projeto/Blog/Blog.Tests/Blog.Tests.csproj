@@ -115,6 +115,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Categoria\UnitTest1.cs" />
     <Compile Include="Services\Permissoes\PermissoesTest.cs" />
     <Compile Include="Services\Usuario\UsuarioService.cs" />
   </ItemGroup>
